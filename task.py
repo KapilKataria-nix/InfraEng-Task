@@ -14,3 +14,11 @@ def random_data():
 
 
 
+def writer_csv():
+    data_length = 10
+    with open('orders.csv','w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Order_ID', 'Customer_ID', 'Order_Date', 'Product_ID', 'Product_Name', 'Product_Price', 'Quantity'])
+        for _ in range(data_length):
+            writer.writerow(random_data())
+
