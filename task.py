@@ -1,13 +1,7 @@
 import csv
 import random
 from datetime import datetime, timedelta
-from flask import Flask
-from test import test_unittest
 
-#Creating a Flask App
-app = Flask(__name__)
-
-@app.route('/task')
 # Function to Generate Random Data for the CSV File
 def generate_random_data():
     order_id = random.randint(1000, 9999)
@@ -134,8 +128,3 @@ if __name__ == '__main__':
 
     except Exception as e:
         print(f"Error: {e}")
-
-
-@app.route('/test')
-def test():
-    return test_unittest()
