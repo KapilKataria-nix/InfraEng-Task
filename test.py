@@ -30,7 +30,7 @@ class TestOrderAnalysis(unittest.TestCase):
         
         # Capture and check the printed output
         output = self.held_output.getvalue().strip()
-        self.assertIn("Month: 1, Total Revenue generated in each month: 100.0", output)
+        self.assertIn("Month: January, Total Revenue generated in each month: 100.0", output)
 
     def test_revenue_generated_by_each_product(self):
         # Mock the CSV file content
