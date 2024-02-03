@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  task:
+    build: .
+    volumes:
+      - ./orders.csv:/app/orders.csv
+    depends_on:
+      - test
+      
+  test:
+    build:
+      context: .
+      dockerfile: test.dockerfile
+    volumes:
+      - ./orders.csv:/app/orders.csv
