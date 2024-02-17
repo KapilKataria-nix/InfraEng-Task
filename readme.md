@@ -9,4 +9,4 @@
 
 ## Running the Task and Test
 
-- Run: docker-compose up
+- Run: docker-compose up -d
